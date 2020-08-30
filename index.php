@@ -25,10 +25,10 @@
       <td>Actividad #</td>
       <td>Título de la actividad</td>
       <td>Descripción.</td>
-      <td><img src="../webapps/arreglos_php/evidencias/slack_actividad_4_1.png">
-      <br><img src="../webapps/arreglos_php/evidencias/slack_actividad_4_2.png">
-      <br><img src="../webapps/arreglos_php/evidencias/github_actividad_4_1.png">
-      <br><img src="../webapps/arreglos_php/evidencias/github_actividad_4_2.png"></td>
+      <td><img src="evidencias/slack_actividad_4_1.png">
+      <br><img src="evidencias/slack_actividad_4_2.png">
+      <br><img src="evidencias/github_actividad_4_1.png">
+      <br><img src="evidencias/github_actividad_4_2.png"></td>
       <td>Mon. Aug. 24, 2020 22:37</td>
      </tr>
     </table>
