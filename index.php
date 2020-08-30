@@ -40,8 +40,8 @@
      ?>
      <label for="orden">Elija cómo desea ver los datos:</label>
      <select name="orden" id="orden">
-       <option value="false">Desordenados</option>
-       <option value="true">Ordenados</option>
+       <option value="0">Desordenados</option>
+       <option value="1">Ordenados</option>
      </select>
      <br><br>
      <input type="submit" value="Submit">
@@ -50,7 +50,16 @@
      if (isset($_POST['orden']))
      {
       $orden=$_REQUEST['orden'];
-      echo $orden ? $Enteros->mostrar() : {$Enteros->ordenar(); $Enteros->mostrar();}."<br>"; 
+      switch($orden)
+      {
+        case 0:
+         $Enteros->mostrar()."<br>"; 
+        break;
+        case 1:
+         $Enteros->ordenar();
+         $Enteros->mostrar();
+        break;
+      }
      }
     ?>
    </div>
