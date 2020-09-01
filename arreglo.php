@@ -15,7 +15,28 @@ class Arreglo
   }
  }
  public function ordena();
- public function cuenta();
+ public function cuenta()
+ {
+  $Contadores = array();
+   for($i = 0; $i < sizeof($this->Arreglo); $i++)
+   {
+    $Contadores[i] = 0;
+   }
+   for($i = 0; $i < sizeof($this->Arreglo); $i++)
+   {
+     for($j = 0; $j < sizeof($this->Arreglo); $j++)
+     {
+      if($this->Arreglo[j] == $this->Arreglo[i])
+      {
+       $Contadores[i]++;
+      }
+     }
+   }
+  for($i = 0; $i < sizeof($this->Arreglo); $i++)
+  {
+   echo "El numero de ".$this->Arreglo[i]."es ".$Contadores[i]."<br>";
+  }
+ }
  public function medVar();
  public function mostrar();
 }
