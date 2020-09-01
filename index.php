@@ -56,8 +56,9 @@
          $Enteros->mostrar()."<br>"; 
         break;
         case 1:
-         $Enteros->ordenar();
-         $Enteros->mostrar();
+         $CopyEnteros = $Enteros;
+         $CopyEnteros->ordenar();
+         $CopyEnteros->mostrar();
         break;
       }
      }
