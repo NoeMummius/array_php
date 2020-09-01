@@ -2,9 +2,9 @@
 class Arreglo
 {
  private $Arreglo;
- public function __constructor()
+ public function __constructor($Arreglo)
  {
-  $this->Arreglo = array();
+  $this->Arreglo = $Arreglo;
  }
  public function __constructor($n)
  {
@@ -38,6 +38,13 @@ class Arreglo
   }
  }
  public function medVar();
- public function mostrar();
+ public function mostrar()
+ {
+  for($i = 0; $i < sizeof($this->Arreglo); $i++)
+  {
+   echo $this->Arreglo[i].', ';
+  }
+  echo '<br>';
+ }
 }
 ?>
