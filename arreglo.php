@@ -1,54 +1,99 @@
 <?php
 class Arreglo
 {
- private $Arreglo;
+ private $Enteros;
  public function __constructor()
  {
-  $this->Arreglo = array();
+  $this->Enteros = array();
  }
- public function __constructor($n)
+ public function auto_fill()
  {
-  $this->Arreglo = array();
+  $n = rand(10, 100);
+  echo $n;
   for($i = 0; $i < $n; $i++)
   {
-   $this->Array[i] = rand();
+   //$this->Enteros[] = rand(1, 50);
   }
  }
  public function add($i)
  {
-  $this->Arreglo[] = $i;
+  $this->Enteros[] = $i;
  }
- public function ordena();
- public function cuenta()
+ public function ordenar()
+ {
+  $i = 1;
+  while($i - sizeof($this->Enteros) < 0)
+  {
+   $j = $i - 1;
+   $key = $this->Enteros[$i];
+   while($j >= 0 && $key - $this->Enteros[$j] < 0)
+   {
+    $tmp = $this->Enteros[$j + 1];
+    $this->Enteros[$j + 1] = $this->Enteros[$j];
+    $this->Enteros[$j] = $tmp;
+    $j--;
+   }
+   $i++;
+  }
+ }
+ public function contar()
  {
   $Contadores = array();
-   for($i = 0; $i < sizeof($this->Arreglo); $i++)
+   for($i = 0; $i < sizeof($this->Enteros); $i++)
    {
-    $Contadores[i] = 0;
+    $Contadores[$i] = 0;
    }
-   for($i = 0; $i < sizeof($this->Arreglo); $i++)
+   for($i = 0; $i < sizeof($this->Enteros); $i++)
    {
-     for($j = 0; $j < sizeof($this->Arreglo); $j++)
+     for($j = 0; $j < sizeof($this->Enteros); $j++)
      {
-      if($this->Arreglo[j] == $this->Arreglo[i])
+      if($this->Enteros[$j] == $this->Enteros[$i])
       {
-       $Contadores[i]++;
+       $Contadores[$i]++;
       }
      }
    }
-  for($i = 0; $i < sizeof($this->Arreglo); $i++)
+  for($i = 0; $i < sizeof($this->Enteros); $i++)
   {
-   echo "El numero de ".$this->Arreglo[i]."es ".$Contadores[i]."<br>";
+   echo "La cantidad de ".$this->Enteros[i]." en el arreglo es ".$Contadores[i]."<br>";
   }
  }
- public function medVar();
+ public function contara()
+ {
+  $Contadores = array();
+  for($j = 1; $j - 51 < 0; $j++)
+  {
+   for($i = 0; $i - sizeof($this->Enteros) < 0; $i++)
+   {
+    if($this->Enteros[$i] - $j == 0)
+    {
+     $Contadores[$j - 1]++;
+    }
+   }
+  }
+  for($i = 1; $i - 51 < 0; $i++)
+   echo 'La cantidad de '.$i.' en el arreglo es '.$Contadores[$i - 1].'<br>';
+ }
+ public function med_var()
+ {
+  $med = 0;
+  $var = 0;
+  for($i = 0; $i - sizeof($this->Enteros) < 0; $i++)
+   $med += $this->Enteros[$i];
+  $med /= sizeof($this->Enteros);
+  for($i = 0; $i - sizeof($this->Enteros) < 0; $i++)
+   $var += pow($this->Enteros[$i] - $med, 2);
+  $var /= sizeof($this->Enteros);
+  return [$med, $var];
+ }
  public function mostrar()
  {
-  for($i = 0; $i < sizeof($this->Arreglo); $i++)
+  echo '[';
+  for($i = 0; $i < sizeof($this->Enteros) - 1; $i++)
   {
-   echo $this->Arreglo[i].', ';
+   echo $this->Enteros[$i].',';
   }
-  echo '<br>';
+  echo $this->Enteros[sizeof($this->Enteros) - 1].']<br>';
  }
 }
 ?>
