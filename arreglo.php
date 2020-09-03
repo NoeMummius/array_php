@@ -2,9 +2,9 @@
 class Arreglo
 {
  private $Arreglo;
- public function __constructor($Arreglo)
+ public function __constructor()
  {
-  $this->Arreglo = $Arreglo;
+  $this->Arreglo = array();
  }
  public function __constructor($n)
  {
@@ -13,6 +13,10 @@ class Arreglo
   {
    $this->Array[i] = rand();
   }
+ }
+ public function add($i)
+ {
+  $this->Arreglo[] = $i;
  }
  public function ordena();
  public function cuenta()
