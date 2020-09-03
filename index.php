@@ -81,7 +81,6 @@
      {
       $Enteros = new Arreglo();
       $Enteros->auto_fill();
-      $Enteros->contara();
      }
      if (isset($_POST['orden']))
      {
@@ -100,6 +99,7 @@
       $var = 0;
       [$med, $var] = $Enteros->med_var();
       echo 'Media: '.$med.'<br>Varianza: '.$var.'<br>';
+      $Enteros->contara();
      }
     ?>
    </div>
